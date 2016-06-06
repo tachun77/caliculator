@@ -30,6 +30,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+       //0から9までの数字の割り当て
     @IBAction func select0(){
         number = number*10 + 0
         label.text = String(number)
@@ -76,7 +78,7 @@ class ViewController: UIViewController {
         label.text = String(number)
     }
 
-
+//四則演算をそれぞれoperation1から４に割り当て
         @IBAction func plus(){
             label.text = "+"
             
@@ -105,6 +107,7 @@ class ViewController: UIViewController {
         number2=number
         number = 0
     }
+    //イコールを押した時にどの計算をすれば良いかの判断
         @IBAction func equal(){
             if operation == 1{
                 label.text = String(number + number2)
@@ -115,6 +118,7 @@ class ViewController: UIViewController {
             }else if operation == 4{
                             label.text = String(number / number2)}
                     }
+    //クリア
     @IBAction func clear(){
         number = 0
         label.text = String(0)
